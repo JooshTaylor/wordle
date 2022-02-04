@@ -1,16 +1,21 @@
 import React from 'react';
+import { GuessingGrid } from './components/guessing-grid/GuessingGrid';
+import { useCells } from './hooks/useCells';
 
 import { useGame } from './hooks/useGame';
 
 export function App(): JSX.Element {
-  const { game, isLoading } = useGame();
+  const { game, isLoading: isLoadingGame } = useGame();
+  const { cellRows, setCell, isLoading: isLoadingCells } = useCells();
 
-  if (isLoading)
+  if (isLoadingGame || isLoadingCells)
     return <>Loading...</>;
 
   return (
     <div>
-      {game.date}
+      <GuessingGrid cellRows={cellRows} />
+
+      {/* <Keyboard setCell={setCell} /> */}
     </div>
   );
 }
