@@ -1,0 +1,9 @@
+.keyboard-row {
+  display: flex;
+  margin: 0 -2px 4px;
+}
+
+.keyboard-key {
+  border: 1px solid black;
+  margin: 0 2px;
+}

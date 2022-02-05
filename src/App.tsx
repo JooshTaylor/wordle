@@ -11,6 +11,7 @@ export function App(): JSX.Element {
   const {
     cellRows,
     selectCharacter,
+    deleteCharacter,
     submitWord,
     isLoading: isLoadingCells
   } = useCells(game);
@@ -22,7 +23,7 @@ export function App(): JSX.Element {
     <div>
       <GuessingGrid cellRows={cellRows} />
 
-      <Keyboard selectCharacter={selectCharacter} submitWord={submitWord} />
+      <Keyboard selectCharacter={selectCharacter} deleteCharacter={deleteCharacter} submitWord={submitWord} />
     </div>
   );
 }

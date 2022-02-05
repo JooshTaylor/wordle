@@ -71,6 +71,28 @@ export const useCells = (game: Game) => {
     });
   }
 
+  function deleteCharacter(): void {
+    const currentGuessRowIndex = getCurrentRowIndex(cellRows);
+    const currentGuessCellIndex = getCurrentCellIndex(cellRows);
+
+    setCellRows(currentVal => {
+      return currentVal.map((row, rowIndex) => {
+        if (rowIndex !== currentGuessRowIndex)
+          return row;
+
+        return row.map((cell, cellIndex) => {
+          if (cellIndex + 1 !== currentGuessCellIndex)
+            return cell;
+
+          return {
+            value: '',
+            status: CellStatus.Empty
+          };
+        });
+      });
+    });
+  }
+
   function submitWord(): void {
     const currentGuessRowIndex = getCurrentRowIndex(cellRows);
 
@@ -141,6 +163,7 @@ export const useCells = (game: Game) => {
     cellRows,
     selectCharacter,
     submitWord,
+    deleteCharacter,
     isLoading
   };
 };
