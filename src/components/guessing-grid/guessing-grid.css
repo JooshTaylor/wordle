@@ -10,3 +10,15 @@
   height: 50px;
   border: 1px solid black;
 }
+
+.correct {
+  background-color: lightgreen;
+}
+
+.partially-correct {
+  background-color: lightyellow;
+}
+
+.incorrect {
+  background-color: lightgray;
+}

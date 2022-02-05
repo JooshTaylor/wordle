@@ -13,7 +13,7 @@ export function App(): JSX.Element {
     selectCharacter,
     submitWord,
     isLoading: isLoadingCells
-  } = useCells();
+  } = useCells(game);
 
   if (isLoadingGame || isLoadingCells)
     return <>Loading...</>;
