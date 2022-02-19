@@ -1,0 +1,8 @@
+Idea:
+X amount of players join a lobby (100 or so?)
+Game starts when 100 players join or 60 seconds after 10 players have joined
+When game starts, everyone starts with same random word. 5 minutes to guess it.
+Players are eliminated if they fail to guess the word or don't finish in time.
+As the rounds go on, the words get harder or longer or the timer gets shorter
+At the end of the game, someone is crowned the winner
+Game has public leaderboards, friends, unique usernames + logins, statistics, etc

@@ -40,7 +40,6 @@ export function Keyboard(props: KeyboardProps): JSX.Element {
           </button>
         ))}
 
-        
         <button key='delete' className='keyboard-key' onClick={props.deleteCharacter}>
           DEL
         </button>
